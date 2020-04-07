@@ -9,7 +9,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 
 const loadedContent = (
-    <div style={{height: '10em'}}>
+    <div>
         <Typography color="textSecondary" gutterBottom>
             Lorem Ipsum
         </Typography>
@@ -20,7 +20,7 @@ const loadedContent = (
 );
 
 const placeHolder = (
-    <div style={{height: '10em'}}>
+    <div>
         <Skeleton variant="text" />
         <Skeleton variant="text" />
         <Skeleton variant="text" />
@@ -36,8 +36,8 @@ const DummyCard = ({delay}) => {
     }, delay);
 
     return (
-        <Card>
-            <CardContent>
+        <Card style={{minHeight: '10em'}}>
+            <CardContent >
                 {shown ? loadedContent : placeHolder}
             </CardContent>
         </Card>
