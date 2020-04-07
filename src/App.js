@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Container from "@material-ui/core/Container";
+import DummyCards from './Components/DummyCards';
+import Link from "@material-ui/core/Link";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const numCards = 50;
+
+    return (
+    <Container className="App">
+        <h1>April 7 Exercise 1 <Link href={'https://github.com/omenyayl/swe-april7-exercise1'}>SOURCE</Link> </h1>
+        <DummyCards numCards={numCards}/>
+    </Container>
+    );
 }
 
 export default App;
